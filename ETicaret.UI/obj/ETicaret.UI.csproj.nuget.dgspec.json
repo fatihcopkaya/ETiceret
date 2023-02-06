@@ -4,6 +4,288 @@
     "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/ETicaret.UI.csproj": {}
   },
   "projects": {
+    "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/BusiniessLayer/BusiniessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/BusiniessLayer/BusiniessLayer.csproj",
+        "projectName": "BusiniessLayer",
+        "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/BusiniessLayer/BusiniessLayer.csproj",
+        "packagesPath": "/Users/fatihcopkayaoglu/.nuget/packages/",
+        "outputPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/BusiniessLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/fatihcopkayaoglu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/DataAccessLayer/DataAccessLayer.csproj": {
+                "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/DataAccessLayer/DataAccessLayer.csproj"
+              },
+              "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/EntityLayer.csproj": {
+                "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/EntityLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/CoreLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/CoreLayer.csproj",
+        "projectName": "CoreLayer",
+        "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/CoreLayer.csproj",
+        "packagesPath": "/Users/fatihcopkayaoglu/.nuget/packages/",
+        "outputPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/fatihcopkayaoglu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.WebUtilities": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.26.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/DataAccessLayer/DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/DataAccessLayer/DataAccessLayer.csproj",
+        "projectName": "DataAccessLayer",
+        "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/DataAccessLayer/DataAccessLayer.csproj",
+        "packagesPath": "/Users/fatihcopkayaoglu/.nuget/packages/",
+        "outputPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/DataAccessLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/fatihcopkayaoglu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/CoreLayer.csproj": {
+                "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/CoreLayer.csproj"
+              },
+              "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/EntityLayer.csproj": {
+                "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/EntityLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/EntityLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/EntityLayer.csproj",
+        "projectName": "EntityLayer",
+        "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/EntityLayer.csproj",
+        "packagesPath": "/Users/fatihcopkayaoglu/.nuget/packages/",
+        "outputPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/fatihcopkayaoglu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/CoreLayer.csproj": {
+                "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/CoreLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/ETicaret.UI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,7 +308,17 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/BusiniessLayer/BusiniessLayer.csproj": {
+                "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/BusiniessLayer/BusiniessLayer.csproj"
+              },
+              "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/DataAccessLayer/DataAccessLayer.csproj": {
+                "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/DataAccessLayer/DataAccessLayer.csproj"
+              },
+              "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/EntityLayer.csproj": {
+                "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/EntityLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

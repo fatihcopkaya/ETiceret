@@ -1,0 +1,15 @@
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/bin/Debug/net7.0/EntityLayer.deps.json
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/bin/Debug/net7.0/EntityLayer.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/bin/Debug/net7.0/EntityLayer.pdb
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/bin/Debug/net7.0/CoreLayer.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/bin/Debug/net7.0/CoreLayer.pdb
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/Debug/net7.0/EntityLayer.csproj.AssemblyReference.cache
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/Debug/net7.0/EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/Debug/net7.0/EntityLayer.AssemblyInfoInputs.cache
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/Debug/net7.0/EntityLayer.AssemblyInfo.cs
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/Debug/net7.0/EntityLayer.csproj.CoreCompileInputs.cache
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/Debug/net7.0/EntityLayer.csproj.CopyComplete
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/Debug/net7.0/EntityLayer.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/Debug/net7.0/refint/EntityLayer.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/Debug/net7.0/EntityLayer.pdb
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/obj/Debug/net7.0/ref/EntityLayer.dll

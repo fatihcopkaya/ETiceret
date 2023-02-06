@@ -1,0 +1,12 @@
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/bin/Debug/net7.0/CoreLayer.deps.json
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/bin/Debug/net7.0/CoreLayer.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/bin/Debug/net7.0/CoreLayer.pdb
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/obj/Debug/net7.0/CoreLayer.csproj.AssemblyReference.cache
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/obj/Debug/net7.0/CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/obj/Debug/net7.0/CoreLayer.AssemblyInfoInputs.cache
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/obj/Debug/net7.0/CoreLayer.AssemblyInfo.cs
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/obj/Debug/net7.0/CoreLayer.csproj.CoreCompileInputs.cache
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/obj/Debug/net7.0/CoreLayer.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/obj/Debug/net7.0/refint/CoreLayer.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/obj/Debug/net7.0/CoreLayer.pdb
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/obj/Debug/net7.0/ref/CoreLayer.dll
