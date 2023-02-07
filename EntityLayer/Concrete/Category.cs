@@ -9,10 +9,10 @@ namespace EntityLayer.Concrete
     public class Category : Entity
     {
       
-        public int CategoryId { get; set; }
          public int? ParentId { get; set; }
         public string Title { get; set; }
         public string? Description { get; set; }
+         public string SlugUrl { get; set; }
         public bool IsActived { get; set; }
         public virtual Category Parent { get; set; }
 		public virtual ICollection<Category> Children { get; set; }

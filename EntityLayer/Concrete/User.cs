@@ -16,7 +16,7 @@ namespace EntityLayer.Concrete
         public string PhoneNumber { get; set; }
         public byte[] PasswordSalt { get; set; }
         public byte[] PasswordHash { get; set; }
-        public string Role { get; set; } = "User";
+        public string Role { get; set; } 
         public bool IsActived { get; set; }
         [NotMapped]
         public string Password { get; set; }

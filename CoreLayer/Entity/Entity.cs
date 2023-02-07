@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CoreLayer.Entity
 {
-    public class Entity
+    public class Entity : IEntity
     {
         public int Id { get; set; }
         public string GuId { get; set; }
