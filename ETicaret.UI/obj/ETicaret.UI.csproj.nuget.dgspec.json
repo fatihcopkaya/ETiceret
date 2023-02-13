@@ -45,6 +45,24 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[6.0.0-preview.4.21253.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -312,6 +330,9 @@
               "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/BusiniessLayer/BusiniessLayer.csproj": {
                 "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/BusiniessLayer/BusiniessLayer.csproj"
               },
+              "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/CoreLayer.csproj": {
+                "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/CoreLayer/CoreLayer.csproj"
+              },
               "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/DataAccessLayer/DataAccessLayer.csproj": {
                 "projectPath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/DataAccessLayer/DataAccessLayer.csproj"
               },
@@ -330,6 +351,30 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

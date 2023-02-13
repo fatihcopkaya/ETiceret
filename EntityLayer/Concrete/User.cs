@@ -16,7 +16,10 @@ namespace EntityLayer.Concrete
         public string PhoneNumber { get; set; }
         public byte[] PasswordSalt { get; set; }
         public byte[] PasswordHash { get; set; }
-        public string Role { get; set; } 
+        public string Token { get; set; }
+        public string SecretKey { get; set; } = Guid.NewGuid().ToString().Replace("-", "") + DateTime.Now.ToString().Replace("-", "").Replace(" ", "").Replace(":", "");
+        public DateTime TokenExpiryDate { get; set; }
+        public string Role { get; set; }
         public bool IsActived { get; set; }
         [NotMapped]
         public string Password { get; set; }

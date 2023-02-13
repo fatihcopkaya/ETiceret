@@ -28,7 +28,7 @@ namespace DataAccessLayer.Concrete.Context
         public DbSet<Category>? Categories { get; set; }
         public DbSet<Product>? Products { get; set; }
         public DbSet<ProductPhoto>? ProductPhotos { get; set; }
-        public DbSet<Document>? Documents { get; set; }
+        public DbSet<Document> Documents { get; set; }
         public DbSet<User>? Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

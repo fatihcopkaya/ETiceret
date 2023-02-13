@@ -1,0 +1,56 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <img alt="profile" src="~/web/images/149071.png" width="30" />
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="block m-t-xs font-bold">@ViewBag.an</span>
+                        <span class="text-muted text-xs block">Admin<b class="caret"></b></span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                        <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                        <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+            </li>
+
+
+
+            <li>
+                <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Kategori
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="/Category/AddCategory">Kategori Ekle</a></li>
+                            <li><a href="/Category/categoryList">Kategori Düzenle</a></li>
+
+                        </ul>
+            </li>
+
+            <li>
+                <a href="/Comment/CommentListByBlog"><i class="fa fa-flask"></i> <span
+                        class="nav-label">Yorumlar</span></a>
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+
+    </div>
+</nav>

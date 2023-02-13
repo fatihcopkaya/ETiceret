@@ -9,7 +9,7 @@ using EntityLayer.Concrete;
 
 namespace DataAccessLayer.Concrete.EntityFramework
 {
-    public class EfDocumentRepository : EfEntityRepositoryBaseAsync<Document, EticaretContext>, ICategoryDal
+    public class EfDocumentRepository : EfEntityRepositoryBaseAsync<Document, EticaretContext>, IDocumentDal
     {
        
     }

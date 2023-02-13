@@ -4,6 +4,7 @@
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
     <ProjectReference Include="..\BusiniessLayer\BusiniessLayer.csproj" />
+    <ProjectReference Include="..\CoreLayer\CoreLayer.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -11,5 +12,18 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
+     <ItemGroup>
+    <Folder Include="Areas\CMS\Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+     <ItemGroup>
+       <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+       <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+       <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.2" />
+       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+         <PrivateAssets>all</PrivateAssets>
+       </PackageReference>
+       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.3" />
+     </ItemGroup>
 </Project>

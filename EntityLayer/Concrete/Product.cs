@@ -12,6 +12,8 @@ namespace EntityLayer.Concrete
         public string Title { get; set; }
         public string Description { get; set; }
         public string Contents { get; set; }
+        public bool IsActived { get; set; }
+        public int OrderBy { get; set; }
         public string SlugUrl { get; set; }
         public virtual Category Category { get; set; }
          public virtual ICollection<ProductPhoto> ProductPhotos { get; set; }

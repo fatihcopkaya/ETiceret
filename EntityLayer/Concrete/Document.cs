@@ -14,8 +14,8 @@ namespace EntityLayer.Concrete
         public string DocumentSize { get; set; }
         public string DocumentFolderName { get; set; }
         public string Storage_Url { get; set; }
-        public string? Image_Url { get; set; }
-        public string? Video_Url { get; set; }
+        public string? Image_Url { get; set; } = " ";
+        public string? Video_Url { get; set; } = " ";
         public DateTime CreateDate { get; set; }
     }
 }

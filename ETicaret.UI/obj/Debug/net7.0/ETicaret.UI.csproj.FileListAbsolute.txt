@@ -48,3 +48,11 @@
 /Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/obj/Debug/net7.0/ETicaret.UI.pdb
 /Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/obj/Debug/net7.0/ETicaret.UI.genruntimeconfig.cache
 /Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/obj/Debug/net7.0/ref/ETicaret.UI.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/bin/Debug/net7.0/System.Security.Permissions.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/bin/Debug/net7.0/Autofac.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/bin/Debug/net7.0/Autofac.Extensions.DependencyInjection.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/bin/Debug/net7.0/Humanizer.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/bin/Debug/net7.0/System.CodeDom.dll
