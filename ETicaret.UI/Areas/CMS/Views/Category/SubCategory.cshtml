@@ -1,0 +1,92 @@
+@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "SubCategory";
+}
+
+
+<header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
+    <div class="container-xl px-4">
+        <div class="page-header-content pt-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-auto mt-4">
+                    <h1 class="page-header-title">
+                        <span class="page-header-icon"><i data-feather="filter"></i></span>
+                        Kategoriler
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container-xl px-4 mt-n10">
+    <div class="card card-header-actions mb-4">
+        <div class="card-header">
+            Kategori Listesi
+            <div class="rid">
+                <a asp-action="Index" asp-route-id="@ViewBag.CategoryId" class="btn btn-sm btn-dark">Geri git</a>
+                <button data-controler="Category" data-action="Order"
+                    class="btn btn-sm btn-secondary orderBtn">Sırala</button>
+                <a asp-action="Create" asp-route-categoryId="@ViewBag.CategoryId" class="btn btn-sm btn-primary">Alt
+                    Kategori Ekle</a>
+            </div>
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple" class="table-shorting">
+                <thead>
+                    <tr>
+                        <th>Sıralama</th>
+                        <th>Ana Kategori</th>
+                        <th>Kategori</th>
+                        <th>Durumu</th>
+                        <th>#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr data-id="@item.Id">
+                            <td>@item.OrderBy</td>
+                            <td>@item.Parent.Title</td>
+                            <td>@item.Title</td>
+                            <td>
+                                @if (item.IsActived)
+                                {
+                                    <div class="badge bg-primary text-white rounded-pill">Aktif</div>
+                                }
+                                else
+                                {
+                                    <div class="badge bg-danger text-white rounded-pill">Aktif Değil</div>
+                                }
+                            </td>
+                            <td>
+                                <a asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id"
+                               class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i>Düzenle</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id"
+                                    onclick="return confirm('Are you sure you want to delete it?')"
+                                    class="btn btn-datatable btn-icon btn-transparent-dark"><i
+                                        data-feather="trash-2"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).on("submit", "#fromloading", function () {
+            $(this).find('button[type="submit"]')
+            $(this).find('button[type="submit"]').attr("disabled", "true");
+            $(this).find('button[type="submit"]').html('');
+            $(this).find('button[type="submit"]').append('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Kaydet...')
+            setTimeout(() => {
+                $(this).find('.spinner-border').remove();
+                $(this).find('button[type="submit"]').append('Kaydet');
+                $(this).find('button[type="submit"]').attr("disabled", "false");
+            }, 2000);
+        });
+    </script>
+
+}

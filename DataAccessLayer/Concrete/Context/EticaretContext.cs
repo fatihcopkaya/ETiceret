@@ -14,7 +14,7 @@ namespace DataAccessLayer.Concrete.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            const string ConnetDeveloper = "server=localhost;port=3306;database=Eticaret;user=root;password=12345678;Charset=utf8;";
+            const string ConnetDeveloper = "server=localhost;port=3306;database=Market;user=root;password=12345678;Charset=utf8;";
 
             optionsBuilder.UseLazyLoadingProxies()
                 .UseMySql(ConnetDeveloper, ServerVersion.AutoDetect(ConnetDeveloper))
@@ -25,11 +25,11 @@ namespace DataAccessLayer.Concrete.Context
                 });
         }
 
-        public DbSet<Category>? Categories { get; set; }
-        public DbSet<Product>? Products { get; set; }
-        public DbSet<ProductPhoto>? ProductPhotos { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductPhoto> ProductPhotos { get; set; }
         public DbSet<Document> Documents { get; set; }
-        public DbSet<User>? Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,15 +39,13 @@ namespace DataAccessLayer.Concrete.Context
                 FirstName = "Admin",
                 LastName = "Admin",
                 Email = "admin@admin.com",
-                PhoneNumber = "+905468778232",
+                Token = "",
                 IsActived = true,
                 Role = "Admin"
             };
-            HashingHelper.CreatePasswordHash("Admin123", out var passwordHash, out var passwordSalt);
-            admin.PasswordSalt = passwordSalt;
-            admin.PasswordHash = passwordHash;
+             admin.PasswordHash = HashingHelper.CreatePasswordHashOld("Admin123", admin.SecretKey);
             modelBuilder.Entity<User>().HasData(admin);
-            base.OnModelCreating(modelBuilder);
+			base.OnModelCreating(modelBuilder);
 
 
         }

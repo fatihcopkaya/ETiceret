@@ -55,6 +55,12 @@ namespace BusiniessLayer.Concrete
             return new SuccessDataResult<List<Category>>(resultList.ToList());
         }
 
+        public async Task<IResult> GetOrderByCategoryAsync(Category category)
+        {
+            await _categoryDal.UpdateAsync(category);
+            return new SuccessResult(Messages.UpdateMessage);
+        }
+
         public async Task<IResult> UpdateAsync(Category category)
         {
             category.SlugUrl = UrlSeoHelper.UrlSeo(category.SlugUrl);

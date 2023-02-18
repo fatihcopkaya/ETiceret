@@ -1,12 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using BusiniessLayer.Abstract;
 using BusiniessLayer.Contacts;
 using EntityLayer.Concrete;
-using ETicaret.UI.Areas.CMS.Models;
+using ETicaret.UI.Areas.Cms.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
-namespace ETicaret.UI.Areas.CMS.Controllers
+namespace ETicaret.UI.Areas.Cms.Controllers
 {
-    [Area("CMS")]
+    [Area("Cms")]
+    [Authorize(Roles = "Admin")]
     public class CategoryController : Controller
     {
         private readonly ICategoryService _categoryservice;
@@ -25,114 +33,182 @@ namespace ETicaret.UI.Areas.CMS.Controllers
             }
             return NotFound();
         }
-        public IActionResult Create(int CategoryId)
+        public async Task<IActionResult> Create(int? CategoryId)
         {
-            ViewData["CategoryId"] = CategoryId;
+
+            TempData["CategoryId"] = CategoryId;
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Create(CategoryVM categoryVM)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return View(categoryVM);
+                var errors = ModelState.SelectMany(x => x.Value.Errors.Select(z => z.ErrorMessage));
+                var result = await _categoryservice.AddAsync(new Category()
+                {
+                    IsActived = true,
+                    SlugUrl = UrlSeoHelper.UrlSeo(categoryVM.Category.Title),
+                    Description = categoryVM.Category.Description,
+                    Title = categoryVM.Category.Title,
+                    ParentId = categoryVM.Category.ParentId
+                });
+                TempData["Success"] = result.Message;
             }
-            var category = new Category
-
+            catch (Exception ex)
             {
+                TempData["Error"] = $"Beklenmedik Hata: {ex.Message}";
+            }
+            if (categoryVM.Category.ParentId != null && categoryVM.Category.ParentId != 0)
+                return RedirectToAction("SubCategory", "Categories", new { id = categoryVM.Category.ParentId });
+            return RedirectToAction(nameof(CategoryController.Index));
+        }
+        public async Task<IActionResult> CreateSub(int? CategoryId)
+        {
+            TempData["CategoryId"] = CategoryId;
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateSub(int? CategoryId, CategoryVM categoryVM)
+        {
 
-                Title = categoryVM.Category.Title,
-                Description = categoryVM.Category.Description,
-                SlugUrl = categoryVM.Category.SlugUrl
-            };
+            try
+            {
+                var errors = ModelState.SelectMany(x => x.Value.Errors.Select(z => z.ErrorMessage));
+                var result = await _categoryservice.AddAsync(new Category()
+                {
+                    IsActived = true,
+                    SlugUrl = UrlSeoHelper.UrlSeo(categoryVM.Category.Title),
+                    Description = categoryVM.Category.Description,
+                    Title = categoryVM.Category.Title,
+                    ParentId = CategoryId
+                });
 
-            var Category = await _categoryservice.AddAsync(category);
-
+                TempData["Success"] = result.Message;
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = $"Beklenmedik Hata: {ex.Message}";
+            }
+            if (categoryVM.Category.ParentId != null && categoryVM.Category.ParentId != 0)
+                return RedirectToAction("SubCategory", "Categories", new { id = categoryVM.Category.ParentId });
             return RedirectToAction(nameof(CategoryController.Index));
 
-
         }
-        public async Task<IActionResult> Edit(int? CategoryId)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (CategoryId != null)
+            var row = await _categoryservice.GetByCategoryIdAsync(id);
+            if (row.Success)
             {
-                var row = await _categoryservice.GetByCategoryIdAsync(CategoryId.Value);
+                row.Data.IsActived = false;
+                await _categoryservice.UpdateAsync(row.Data);
+                TempData["Succes"] = Messages.DeleteMessage;
+            }
+            if (row.Data.ParentId != null)
+                return RedirectToAction("SubCategory", "Categories", new { id = row.Data.ParentId });
+            return RedirectToAction(nameof(CategoryController.Index));
+        }
+        public async Task<IActionResult> Edit(int? Id, int? ParentId)
+        {
+            if (Id != null)
+            {
+
+                var row = await _categoryservice.GetByCategoryIdAsync(Id.Value);
                 if (row.Success)
                 {
                     return View(new CategoryVM()
                     {
-                        Category = row.Data,
-
-
+                        Category = row.Data
                     });
+
                 }
 
             }
             return NotFound();
         }
         [HttpPost]
-        public async Task<IActionResult> Edit(CategoryVM categoryVM)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? ParentId, int? Id, CategoryVM categoryVM)
         {
-            if (categoryVM.Category.Id != null)
+
+            if (categoryVM.Category.Id > 0)
             {
                 try
                 {
+                    var row = await _categoryservice.GetByCategoryIdAsync(Id.Value);
+                    ParentId = row.Data.ParentId;
+                    categoryVM.Category.ParentId = ParentId;
                     categoryVM.Category.SlugUrl = UrlSeoHelper.UrlSeo(categoryVM.Category.Title);
-                    var row = await _categoryservice.UpdateAsync(categoryVM.Category);
-                    if (row.Success)
+                    categoryVM.Category.IsActived = true;
+                    var result = await _categoryservice.UpdateAsync(categoryVM.Category);
+                    if (result.Success)
                     {
-                        TempData["Succes"] = row.Message;
+
+                        TempData["Success"] = Messages.UpdateMessage;
                     }
                 }
                 catch (Exception ex)
                 {
                     TempData["Error"] = $"Beklenmedik Hata: {ex.Message}";
                 }
+                if (categoryVM.Category.ParentId != null)
+                { return RedirectToAction("SubCategory", "Category", new { id = categoryVM.Category.ParentId }); }
+                else
+                {
+                    return RedirectToAction(nameof(CategoryController.Index));
+                }
 
-                if (categoryVM.Category.ParentId != null || categoryVM.Category.ParentId != 0)
-                    return RedirectToAction("SubCategory", "Categories", new { id = categoryVM.Category.ParentId });
-                return RedirectToAction(nameof(CategoryController.Index));
             }
             return NotFound();
 
         }
-
-        public async Task<IActionResult> Delete(int? CategoryId)
+        [HttpPost]
+        public async Task<IActionResult> Order(List<Order> orders)
         {
-            if (CategoryId != null)
+            try
             {
-                var row = await _categoryservice.GetByCategoryIdAsync(CategoryId.Value);
-                if (row.Success)
+                foreach (var item in orders)
                 {
-                    row.Data.IsActived = false;
-                    await _categoryservice.UpdateAsync(row.Data);
-                    TempData["Success"] = Messages.DeleteMessage;
-                    if (row.Data.ParentId != null)
-                        return RedirectToAction("SubCategory", "Categories", new { id = row.Data.ParentId });
-                    return RedirectToAction(nameof(CategoryController.Index));
-
+                    var category = await _categoryservice.GetByCategoryIdAsync(item.Id);
+                    if (category == null)
+                    {
+                        continue;
+                    }
+                    category.Data.OrderBy = item.Place;
+                    await _categoryservice.GetOrderByCategoryAsync(category.Data);
                 }
+                return Ok(new
+                {
+                    Status = 200,
+                    Message = Messages.UpdateMessage
+                });
             }
-            return NotFound();
+            catch (Exception ex)
+            {
+                return Ok(new
+                {
+                    Status = 404,
+                    ex.Message
+                });
+            }
         }
         public async Task<IActionResult> SubCategory(int? Id)
         {
             if (Id != null)
             {
                 var categoryList = await _categoryservice.GetCategoryParentList(Id.Value);
+
                 if (categoryList.Success)
                 {
                     ViewData["CategoryId"] = Id.Value;
+                    await _categoryservice.GetByCategoryIdAsync(Id.Value);
                     return View(categoryList.Data);
                 }
                 return NotFound();
-
             }
             return NotFound();
         }
 
+
     }
-
-
-
 }

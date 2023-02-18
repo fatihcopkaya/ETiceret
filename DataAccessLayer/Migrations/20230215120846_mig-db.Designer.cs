@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(EticaretContext))]
-    [Migration("20230204211922_mig1")]
-    partial class mig1
+    [Migration("20230215120846_mig-db")]
+    partial class migdb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,9 +31,6 @@ namespace DataAccessLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .HasColumnType("longtext");
 
@@ -44,11 +41,16 @@ namespace DataAccessLayer.Migrations
                     b.Property<bool>("IsActived")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<int>("OrderBy")
+                        .HasColumnType("int");
+
                     b.Property<int?>("ParentId")
                         .HasColumnType("int");
 
+                    b.Property<string>("SlugUrl")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
@@ -127,8 +129,15 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("ProductId")
+                    b.Property<bool>("IsActived")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<int>("OrderBy")
                         .HasColumnType("int");
+
+                    b.Property<string>("SlugUrl")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -196,21 +205,24 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<byte[]>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("longblob");
-
-                    b.Property<byte[]>("PasswordSalt")
-                        .IsRequired()
-                        .HasColumnType("longblob");
-
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<string>("SecretKey")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("TokenExpiryDate")
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 
@@ -222,13 +234,14 @@ namespace DataAccessLayer.Migrations
                             Id = 1,
                             Email = "admin@admin.com",
                             FirstName = "Admin",
-                            GuId = "213ba84bde504d4794c5d0bc94aae674",
+                            GuId = "1958f4561e4c465c96b1a3edf5e7ea25",
                             IsActived = true,
                             LastName = "Admin",
-                            PasswordHash = new byte[] { 123, 251, 134, 244, 128, 36, 86, 156, 30, 121, 10, 154, 128, 247, 191, 229, 209, 30, 154, 147, 3, 244, 23, 144, 60, 111, 82, 10, 62, 99, 207, 215, 159, 41, 90, 28, 26, 140, 118, 90, 74, 179, 202, 129, 96, 197, 35, 215, 3, 43, 13, 217, 132, 255, 190, 158, 65, 6, 24, 202, 200, 209, 131, 147 },
-                            PasswordSalt = new byte[] { 62, 94, 234, 32, 195, 50, 28, 204, 61, 74, 228, 171, 37, 234, 22, 144, 211, 67, 231, 68, 125, 34, 14, 199, 200, 248, 3, 231, 253, 16, 37, 214, 255, 47, 194, 2, 146, 8, 12, 117, 104, 236, 163, 185, 198, 88, 167, 44, 18, 109, 139, 233, 254, 63, 107, 173, 253, 38, 35, 113, 85, 146, 199, 149, 41, 67, 223, 61, 237, 189, 47, 202, 160, 17, 54, 142, 4, 28, 224, 91, 90, 164, 29, 72, 88, 225, 237, 170, 143, 169, 170, 67, 154, 63, 221, 216, 149, 202, 233, 133, 54, 217, 154, 40, 55, 126, 218, 130, 113, 105, 117, 47, 202, 175, 216, 94, 195, 174, 6, 252, 87, 198, 254, 136, 30, 66, 124, 175 },
-                            PhoneNumber = "+905468778232",
-                            Role = "Admin"
+                            PasswordHash = "461af7639a336a60caf96c9606c4c9e1eff61fa87d28d48123cec8bb2faeb107bb3a6aab1d51d7befd83241b5ba891e74e9246ac6aeb604d44f289e72b542b2f",
+                            Role = "Admin",
+                            SecretKey = "8e9bd68446c549dd893b7d40f1b912252/15/202330846PM",
+                            Token = "",
+                            TokenExpiryDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -244,7 +257,7 @@ namespace DataAccessLayer.Migrations
             modelBuilder.Entity("EntityLayer.Concrete.Product", b =>
                 {
                     b.HasOne("EntityLayer.Concrete.Category", "Category")
-                        .WithMany()
+                        .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -266,6 +279,8 @@ namespace DataAccessLayer.Migrations
             modelBuilder.Entity("EntityLayer.Concrete.Category", b =>
                 {
                     b.Navigation("Children");
+
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Product", b =>

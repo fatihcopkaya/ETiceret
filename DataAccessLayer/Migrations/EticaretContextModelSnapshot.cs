@@ -38,15 +38,16 @@ namespace DataAccessLayer.Migrations
                     b.Property<bool>("IsActived")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<int>("OrderBy")
+                        .HasColumnType("int");
+
                     b.Property<int?>("ParentId")
                         .HasColumnType("int");
 
                     b.Property<string>("SlugUrl")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
@@ -125,6 +126,12 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<bool>("IsActived")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<int>("OrderBy")
+                        .HasColumnType("int");
+
                     b.Property<string>("SlugUrl")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -195,21 +202,24 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<byte[]>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("longblob");
-
-                    b.Property<byte[]>("PasswordSalt")
-                        .IsRequired()
-                        .HasColumnType("longblob");
-
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<string>("SecretKey")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("TokenExpiryDate")
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 
@@ -221,13 +231,14 @@ namespace DataAccessLayer.Migrations
                             Id = 1,
                             Email = "admin@admin.com",
                             FirstName = "Admin",
-                            GuId = "4506e61404a5473bb90512b9b6baa57e",
+                            GuId = "1958f4561e4c465c96b1a3edf5e7ea25",
                             IsActived = true,
                             LastName = "Admin",
-                            PasswordHash = new byte[] { 107, 35, 68, 188, 139, 160, 218, 68, 123, 85, 165, 115, 25, 197, 116, 207, 170, 196, 97, 97, 51, 134, 243, 101, 172, 236, 102, 187, 0, 152, 133, 37, 138, 126, 27, 229, 220, 137, 134, 98, 74, 87, 177, 231, 31, 149, 207, 148, 45, 120, 175, 56, 127, 217, 177, 101, 41, 239, 99, 249, 246, 104, 123, 12 },
-                            PasswordSalt = new byte[] { 65, 174, 162, 128, 128, 253, 200, 113, 197, 188, 169, 36, 156, 59, 252, 27, 243, 96, 65, 251, 116, 233, 226, 185, 220, 61, 53, 202, 140, 81, 87, 109, 91, 218, 222, 58, 13, 131, 87, 106, 30, 75, 130, 19, 190, 149, 112, 229, 230, 182, 121, 58, 201, 212, 209, 156, 228, 244, 0, 133, 85, 220, 206, 213, 125, 26, 84, 136, 246, 203, 155, 180, 196, 71, 52, 85, 84, 190, 3, 140, 36, 245, 221, 95, 236, 207, 0, 86, 34, 81, 34, 112, 90, 213, 0, 134, 175, 239, 7, 1, 208, 35, 203, 169, 21, 254, 117, 84, 173, 82, 173, 63, 47, 16, 178, 145, 125, 67, 175, 215, 196, 93, 161, 101, 35, 131, 252, 46 },
-                            PhoneNumber = "+905468778232",
-                            Role = "Admin"
+                            PasswordHash = "461af7639a336a60caf96c9606c4c9e1eff61fa87d28d48123cec8bb2faeb107bb3a6aab1d51d7befd83241b5ba891e74e9246ac6aeb604d44f289e72b542b2f",
+                            Role = "Admin",
+                            SecretKey = "8e9bd68446c549dd893b7d40f1b912252/15/202330846PM",
+                            Token = "",
+                            TokenExpiryDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 

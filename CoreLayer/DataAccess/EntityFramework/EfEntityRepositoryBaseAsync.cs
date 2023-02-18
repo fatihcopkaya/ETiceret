@@ -13,9 +13,9 @@ namespace CoreLayer.DataAccess.EntityFramework
     {
         public async Task AddAsync(TEntity entity)
         {
-           using var _context = new TContext();
-           await _context.Set<TEntity>().AddAsync(entity);
-           await _context.SaveChangesAsync();
+            using var _context = new TContext();
+            await _context.Set<TEntity>().AddAsync(entity);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<TEntity> GetAsync(int id)
@@ -28,12 +28,12 @@ namespace CoreLayer.DataAccess.EntityFramework
         {
             using var _context = new TContext();
             IQueryable<TEntity> queryable = _context.Set<TEntity>();
-            if(filter != null)
+            if (filter != null)
             {
                 queryable = queryable.Where(filter);
 
             }
-            if(include != null)
+            if (include != null)
             {
                 queryable = include(queryable);
             }
@@ -44,13 +44,13 @@ namespace CoreLayer.DataAccess.EntityFramework
         {
             using var _context = new TContext();
             IQueryable<TEntity> queryable = _context.Set<TEntity>();
-            if(filter != null)
+            if (filter != null)
             {
                 queryable = queryable.Where(filter);
             }
-            if(includes != null)
+            if (includes != null)
             {
-                foreach(Expression<Func<TEntity, object>> include in includes)
+                foreach (Expression<Func<TEntity, object>> include in includes)
                 {
                     queryable = queryable.Include(include);
 
@@ -58,29 +58,29 @@ namespace CoreLayer.DataAccess.EntityFramework
             }
             return await queryable.FirstOrDefaultAsync();
 
-        
+
         }
 
         public async Task<IList<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includes)
         {
-            using var _context = new TContext();
-            IQueryable<TEntity> queryable = _context.Set<TEntity>();
+            using var context = new TContext();
+            IQueryable<TEntity> query = context.Set<TEntity>();
             if (filter != null)
             {
-                queryable = queryable.Where(filter);
+                query = query.Where(filter);
             }
-            if(includes != null)
+            if (includes != null)
             {
-                foreach(Expression<Func<TEntity, object>> include in includes)   
+                foreach (Expression<Func<TEntity, object>> include in includes)
                 {
-                    queryable = queryable.Include(include);
+                    query = query.Include(include);
                 }
-            } 
-            if(orderBy != null)
-            {
-                return await orderBy(queryable).ToListAsync();
             }
-            return await queryable.ToListAsync();
+            if (orderBy != null)
+            {
+                return await orderBy(query).ToListAsync();
+            }
+            return await query.ToListAsync();
         }
 
         public async Task RemoveAsync(TEntity entity)

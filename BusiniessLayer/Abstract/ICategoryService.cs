@@ -15,6 +15,7 @@ namespace BusiniessLayer.Abstract
         Task<IDataResult<Category>> AddAsync(Category category);
         Task<IResult> UpdateAsync(Category category);
         Task<IResult> DeleteAsync(Category category);
+         Task<IResult> GetOrderByCategoryAsync(Category category);
 
     }
 }

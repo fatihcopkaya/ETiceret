@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "N7mv1H/RZxrbX8ZCfR2/q0K5uTqKut0twvpA4yN7ERTKx8xuRrvYAcFw2MkvyQ1gWjIM2yx1PyVzbcXIDIUEyw==",
+  "dgSpecHash": "AntJyMgNXQb43PPH7Mp0HcE59WPsaJPJwpCz8iqvhpuFFwdDGHPmALlN+k3TB9hOi9ARCcgH+mGp+6N+LOilAg==",
   "success": true,
   "projectFilePath": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/EntityLayer/EntityLayer.csproj",
   "expectedPackageFiles": [
+    "/Users/fatihcopkayaoglu/.nuget/packages/mailkit/3.4.3/mailkit.3.4.3.nupkg.sha512",
     "/Users/fatihcopkayaoglu/.nuget/packages/microsoft.aspnetcore.webutilities/2.2.0/microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "/Users/fatihcopkayaoglu/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/fatihcopkayaoglu/.nuget/packages/microsoft.entityframeworkcore/7.0.2/microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
@@ -22,8 +23,15 @@
     "/Users/fatihcopkayaoglu/.nuget/packages/microsoft.identitymodel.logging/6.26.0/microsoft.identitymodel.logging.6.26.0.nupkg.sha512",
     "/Users/fatihcopkayaoglu/.nuget/packages/microsoft.identitymodel.tokens/6.26.0/microsoft.identitymodel.tokens.6.26.0.nupkg.sha512",
     "/Users/fatihcopkayaoglu/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "/Users/fatihcopkayaoglu/.nuget/packages/mimekit/3.4.3/mimekit.3.4.3.nupkg.sha512",
+    "/Users/fatihcopkayaoglu/.nuget/packages/newtonsoft.json/13.0.2/newtonsoft.json.13.0.2.nupkg.sha512",
+    "/Users/fatihcopkayaoglu/.nuget/packages/portable.bouncycastle/1.9.0/portable.bouncycastle.1.9.0.nupkg.sha512",
     "/Users/fatihcopkayaoglu/.nuget/packages/system.buffers/4.5.0/system.buffers.4.5.0.nupkg.sha512",
+    "/Users/fatihcopkayaoglu/.nuget/packages/system.formats.asn1/6.0.0/system.formats.asn1.6.0.0.nupkg.sha512",
+    "/Users/fatihcopkayaoglu/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/fatihcopkayaoglu/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "/Users/fatihcopkayaoglu/.nuget/packages/system.security.cryptography.pkcs/6.0.0/system.security.cryptography.pkcs.6.0.0.nupkg.sha512",
+    "/Users/fatihcopkayaoglu/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "/Users/fatihcopkayaoglu/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
   "logs": []

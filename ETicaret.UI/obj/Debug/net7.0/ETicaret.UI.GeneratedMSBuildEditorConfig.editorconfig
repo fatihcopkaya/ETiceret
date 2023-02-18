@@ -16,32 +16,40 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = /Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/CMS/Views/Category/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ01TL1ZpZXdzL0NhdGVnb3J5L0NyZWF0ZS5jc2h0bWw=
+[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/Cms/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ21zL1ZpZXdzL0FjY291bnQvTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/CMS/Views/Category/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ01TL1ZpZXdzL0NhdGVnb3J5L0RlbGV0ZS5jc2h0bWw=
+[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/Cms/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ21zL1ZpZXdzL0NhdGVnb3J5L0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/CMS/Views/Category/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ01TL1ZpZXdzL0NhdGVnb3J5L0VkaXQuY3NodG1s
+[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/Cms/Views/Category/CreateSub.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ21zL1ZpZXdzL0NhdGVnb3J5L0NyZWF0ZVN1Yi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/CMS/Views/Category/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ01TL1ZpZXdzL0NhdGVnb3J5L0luZGV4LmNzaHRtbA==
+[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/Cms/Views/Category/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ21zL1ZpZXdzL0NhdGVnb3J5L0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/CMS/Views/Category/SubCategory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ01TL1ZpZXdzL0NhdGVnb3J5L1N1YkNhdGVnb3J5LmNzaHRtbA==
+[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/Cms/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ21zL1ZpZXdzL0NhdGVnb3J5L0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/CMS/Views/Home/AdminNavbarPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ01TL1ZpZXdzL0hvbWUvQWRtaW5OYXZiYXJQYXJ0aWFsLmNzaHRtbA==
+[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/Cms/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ21zL1ZpZXdzL0NhdGVnb3J5L0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/CMS/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ01TL1ZpZXdzL0hvbWUvSW5kZXguY3NodG1s
+[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/Cms/Views/Category/SubCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ21zL1ZpZXdzL0NhdGVnb3J5L1N1YkNhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/Cms/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ21zL1ZpZXdzL19WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Areas/Cms/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQ21zL1ZpZXdzL19WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/Views/Home/Index.cshtml]

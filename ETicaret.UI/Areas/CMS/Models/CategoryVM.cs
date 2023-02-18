@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using EntityLayer.Concrete;
 
-namespace ETicaret.UI.Areas.CMS.Models
+namespace ETicaret.UI.Areas.Cms.Models
 {
     public class CategoryVM
     {
         public Category Category { get; set; }
+       
     }
 }

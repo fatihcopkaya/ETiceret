@@ -42,8 +42,8 @@ namespace BusiniessLayer.Concrete
 
         public async Task<IDataResult<User>> GetByIdAsync(int userId)
         {
-            var row = await _userdal.GetFirstOrDefaultAsync(x=>x.Id == userId);
-            if(row != null)
+            var row = await _userdal.GetFirstOrDefaultAsync(x => x.Id == userId);
+            if (row != null)
             {
                 return new SuccessDataResult<User>(row);
             }
@@ -67,32 +67,30 @@ namespace BusiniessLayer.Concrete
 
         public async Task<IDataResult<List<User>>> GetListListAsync()
         {
-           return new SuccessDataResult<List<User>>((await _userdal.GetListAsync(x=>x.IsActived == true)).ToList());
+            return new SuccessDataResult<List<User>>((await _userdal.GetListAsync(x => x.IsActived == true)).ToList());
         }
 
         public async Task<IDataResult<User>> SignInAsync(User user)
         {
-            var row = await _userdal.GetFirstOrDefaultAsync(x => x.Email == user.Email.Trim() && x.Password == user.Password.Trim());
-            if (row != null)
+            var row = await _userdal.GetFirstOrDefaultAsync(x => x.Email == user.Email.Trim());
+            if (row != null && HashingHelper.VerifyPasswordHashOld(user.Password, row.SecretKey, row.PasswordHash))
             {
                 var identity = new ClaimsIdentity(new Claim[]
                 {
                     new Claim(ClaimTypes.Name, row.FirstName),
                     new Claim(ClaimTypes.Email, row.Email),
-                    new Claim(ClaimTypes.Role ,row.Role)
-
+                    new Claim(ClaimTypes.Role, row.Role)
                 }, CookieAuthenticationDefaults.AuthenticationScheme);
                 bool isAuthenticated = true;
                 var principal = new ClaimsPrincipal(identity);
                 if (isAuthenticated)
                 {
-                    await _httpContextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                     principal, new AuthenticationProperties
-                     {
-                         ExpiresUtc = DateTime.UtcNow.AddDays(1),
-                         IsPersistent = true,
-                         AllowRefresh = false
-                     });
+                    await _httpContextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties
+                    {
+                        ExpiresUtc = DateTime.UtcNow.AddDays(1),
+                        IsPersistent = true,
+                        AllowRefresh = false
+                    });
                     return new SuccessDataResult<User>(row, Messages.SuccesfulLogin);
                 }
             }
