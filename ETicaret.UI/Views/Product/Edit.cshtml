@@ -1,0 +1,74 @@
+@model ProductVM
+@{
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
+}
+
+<header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
+    <div class="container-xl px-4">
+        <div class="page-header-content pt-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-auto mt-4">
+                    <h1 class="page-header-title">
+                        <span class="page-header-icon"><i data-feather="edit-3"></i></span>
+                        Create News
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container-xl px-4 mt-n10">
+    <form id="fromloading" enctype="multipart/form-data" asp-action="Edit" asp-antiforgery="true">
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="card card-header-actions mb-4">
+
+                    <div class="card-body">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="form-group mb-3">
+                                <label class="form-label" asp-for="Product.Title">Title </label>
+                                <input type="text" class="form-control" asp-for="Product.Title">
+                                <span class="text-danger" asp-validation-for="Product.Title"></span>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="form-label" asp-for="Product.Description">Body</label>
+                                <textarea class="form-control" asp-for="Product.Description" rows="5" cols="5"></textarea>
+                                <span class="text-danger" asp-validation-for="Product.Description"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card mb-4">
+                    <div class="card-header">Fixed Fields</div>
+                    <div class="card-body">
+                        <div class="form-group mb-3">
+                            <label class="form-label" asp-for="Product.CategoryId">Category</label>
+                            <select class="form-select" asp-for="Product.CategoryId">
+                                <option value="" selected>Select</option>
+                                @foreach (var item in Model.Categories)
+                                {
+                                    <option value="@item.Id">@item.Title</option>
+                                    
+                                }
+                            </select>
+                            <span class="text-danger" asp-validation-for="Product.CategoryId"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="Product.FileCode" class="form-label">News Image</label>
+                            <input class="form-control" type="file" name="file" id="file">
+                             <input type="hidden" asp-for="Product.FileCode" />
+                            <span asp-validation-for="Product.FileCode" class="text-danger"></span>
+                        </div>
+                        <div class="bn">
+                            <button type="submit" class="btn  btn-primary">Save</button>
+                            <a asp-action="Index" class="btn  btn-dark">Give up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

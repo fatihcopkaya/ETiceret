@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using BusiniessLayer.Abstract;
 using BusiniessLayer.Contacts;
@@ -14,15 +15,19 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 
 
+
 namespace BusiniessLayer.Concrete
 {
     public class UserManager : IUserService
     {
+        
+    
         private readonly IUserDal _userdal;
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         public UserManager(IUserDal userdal, IHttpContextAccessor httpContextAccessor)
         {
+           
             _userdal = userdal;
             _httpContextAccessor = httpContextAccessor;
         }
@@ -42,6 +47,7 @@ namespace BusiniessLayer.Concrete
 
         public async Task<IDataResult<User>> GetByIdAsync(int userId)
         {
+            
             var row = await _userdal.GetFirstOrDefaultAsync(x => x.Id == userId);
             if (row != null)
             {
@@ -49,6 +55,8 @@ namespace BusiniessLayer.Concrete
             }
             return new ErrorDataResult<User>(new User(), Messages.RecordMessage);
         }
+
+       
 
         public async Task<IDataResult<User>> GetByMailAsync(string userEmail)
         {
@@ -68,6 +76,22 @@ namespace BusiniessLayer.Concrete
         public async Task<IDataResult<List<User>>> GetListListAsync()
         {
             return new SuccessDataResult<List<User>>((await _userdal.GetListAsync(x => x.IsActived == true)).ToList());
+        }
+
+        public async Task<IDataResult<User>> Register(User user)
+        {
+          var row =  HashingHelper.CreatePasswordHashOld(user.Password, user.SecretKey);
+          if(row != null)
+          {
+
+               user.PasswordHash = row;
+               user.IsActived = true;
+               user.Token = "";
+               await _userdal.AddAsync(user);
+          }
+           
+            return new SuccessDataResult<User>(user, Messages.AddMessage);
+
         }
 
         public async Task<IDataResult<User>> SignInAsync(User user)

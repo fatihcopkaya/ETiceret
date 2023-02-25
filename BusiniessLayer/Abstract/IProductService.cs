@@ -10,7 +10,7 @@ namespace BusiniessLayer.Abstract
     public interface IProductService
     {
         Task<IDataResult<Product>> GetByProductIdAsync(int ProductId);
-        Task<IDataResult<List<Product>>> GetProductListAsync();
+        Task<IDataResult<List<Product>>> GetProductListByUserAsync(int id);
         Task<IResult> GetOrderByProductAsync(Product product);
         Task<IDataResult<Product>> AddAsync(Product product);
         Task<IResult> UpdateAsync(Product product);
@@ -18,6 +18,9 @@ namespace BusiniessLayer.Abstract
         Task<IResult> AddPhotoAsync(ProductPhoto productPhoto);
         Task<IResult> UpdatePhotoAsync(ProductPhoto productPhoto);
         Task<IResult> DeletePhotoAsync(ProductPhoto productPhoto);
+        Task<IDataResult<List<Product>>> GetProductList();
+
+
 
     }
 }

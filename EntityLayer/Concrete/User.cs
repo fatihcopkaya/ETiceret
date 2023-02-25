@@ -15,9 +15,9 @@ namespace EntityLayer.Concrete
         public string Email { get; set; }        
         public string PasswordHash { get; set; }
         public string SecretKey { get; set; } = Guid.NewGuid().ToString().Replace("-", "") + DateTime.Now.ToString().Replace("-", "").Replace(" ", "").Replace(":", "");
-        public string Role { get; set; } 
+        public string Role { get; set; } = "User";
         public DateTime TokenExpiryDate { get; set; }
-        public string Token { get; set; }
+        public string? Token { get; set; }
         public bool IsActived { get; set; }
         [NotMapped]
         public string Password { get; set; } 

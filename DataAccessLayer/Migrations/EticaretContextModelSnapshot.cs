@@ -93,10 +93,6 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Image_Url")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Storage_Url")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("Video_Url")
                         .HasColumnType("longtext");
 
@@ -114,11 +110,11 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Contents")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("FileCode")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -140,9 +136,14 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Products");
                 });
@@ -161,7 +162,7 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Index")
+                    b.Property<int?>("Index")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActived")
@@ -215,7 +216,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Token")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<DateTime>("TokenExpiryDate")
@@ -231,12 +231,12 @@ namespace DataAccessLayer.Migrations
                             Id = 1,
                             Email = "admin@admin.com",
                             FirstName = "Admin",
-                            GuId = "1958f4561e4c465c96b1a3edf5e7ea25",
+                            GuId = "71270aac9b0f41a2bdbba689bed5adff",
                             IsActived = true,
                             LastName = "Admin",
-                            PasswordHash = "461af7639a336a60caf96c9606c4c9e1eff61fa87d28d48123cec8bb2faeb107bb3a6aab1d51d7befd83241b5ba891e74e9246ac6aeb604d44f289e72b542b2f",
+                            PasswordHash = "1b3298e7078ae7fcbec557c5d3f10ca62fe4e75c5c147f3f5ee70d03599132d846832daa547ff63fb2c64e5cf71ea00f915352b45ce362faf1dce31d1b4e59d7",
                             Role = "Admin",
-                            SecretKey = "8e9bd68446c549dd893b7d40f1b912252/15/202330846PM",
+                            SecretKey = "b5b5175de04a4351b5388876ea45f0102/25/202341948PM",
                             Token = "",
                             TokenExpiryDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -259,7 +259,15 @@ namespace DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("EntityLayer.Concrete.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Category");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.ProductPhoto", b =>

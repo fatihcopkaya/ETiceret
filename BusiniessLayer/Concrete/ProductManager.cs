@@ -33,8 +33,8 @@ namespace BusiniessLayer.Concrete
 
         public async Task<IResult> DeleteAsync(Product product)
         {
-           await _productdal.UpdateAsync(product);
-           return new SuccessResult(Messages.DeleteMessage);
+            await _productdal.UpdateAsync(product);
+            return new SuccessResult(Messages.DeleteMessage);
         }
 
         public async Task<IResult> DeletePhotoAsync(ProductPhoto productPhoto)
@@ -45,25 +45,33 @@ namespace BusiniessLayer.Concrete
 
         public async Task<IDataResult<Product>> GetByProductIdAsync(int ProductId)
         {
-            var row = await _productdal.GetFirstOrDefaultAsync(x => x.Id == ProductId, x=>x.ProductPhotos);
-            if(row != null)
+            var row = await _productdal.GetFirstOrDefaultAsync(x => x.Id == ProductId, x => x.ProductPhotos);
+            if (row != null)
             {
                 return new SuccessDataResult<Product>(row);
             }
             return new ErrorDataResult<Product>(new Product(), Messages.RecordMessage);
         }
 
-        public async Task<IResult> GetOrderByProductAsync(Product product)
+        public async Task<IDataResult<List<Product>>> GetProductList()
         {
-           await _productdal.UpdateAsync(product);
-           return new SuccessResult(Messages.UpdateMessage);
+             var resultList = await _productdal.GetListAsync(x => x.IsActived == true,
+            x => x.OrderBy(x => x.OrderBy),
+            x => x.ProductPhotos);
+            return new SuccessDataResult<List<Product>>(resultList.ToList());
         }
 
-        public async Task<IDataResult<List<Product>>> GetProductListAsync()
+        public async Task<IResult> GetOrderByProductAsync(Product product)
         {
-            var resultList = await _productdal.GetListAsync(x => x.IsActived == true,
-            x=>x.OrderBy(x=>x.OrderBy),
-            x=>x.ProductPhotos);
+            await _productdal.UpdateAsync(product);
+            return new SuccessResult(Messages.UpdateMessage);
+        }
+
+        public async Task<IDataResult<List<Product>>> GetProductListByUserAsync(int id)
+        {
+            var resultList = await _productdal.GetListAsync(x => x.IsActived == true && x.UserId == id,
+            x => x.OrderBy(x => x.OrderBy),
+            x => x.ProductPhotos);
             return new SuccessDataResult<List<Product>>(resultList.ToList());
         }
 

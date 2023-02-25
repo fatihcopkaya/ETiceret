@@ -53,9 +53,11 @@ namespace BusiniessLayer.Concrete
                         DocumentFolderName = FolderName,
                         DocumentType = GetMimeTypes(file.ContentType),
                         DocumentSize = file.Length.ToString(),
-                        Image_Url = Image_Url,
-                        Video_Url = Video_Url,
-                        CreateDate = DateTime.Now
+                         Image_Url = Image_Url,
+                         Video_Url = Video_Url,
+                        CreateDate = DateTime.Now,
+                        
+                        
 
 
                     });

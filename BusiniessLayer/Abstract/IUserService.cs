@@ -17,5 +17,6 @@ namespace BusiniessLayer.Abstract
         Task<IDataResult<User>> AddAsync(User user);
         Task<IResult> UpdateAsync(User user);
         Task<IResult> DeleteAsync(User user);
+        Task<IDataResult<User>> Register(User user);
     }
 }

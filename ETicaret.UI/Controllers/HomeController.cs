@@ -1,31 +1,35 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ETicaret.UI.Models;
+using BusiniessLayer.Abstract;
 
 namespace ETicaret.UI.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly IProductService _productService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(IProductService productService)
     {
-        _logger = logger;
+        _productService = productService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+       var list = await _productService.GetProductList();
+       return View(list.Data);
+    }
+    public async Task<PartialViewResult> SliderPartial()
+    {
+        var result = await _productService.GetProductList();
+        return PartialView(result);
+    }
+    public async Task<IActionResult> Item(int? Id)
+    {
+        var item = await _productService.GetByProductIdAsync(Id.Value);
+        return View(item);
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+  
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
 }
