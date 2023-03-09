@@ -35,6 +35,11 @@
                                 <textarea class="form-control" asp-for="Product.Description" rows="5" cols="5"></textarea>
                                 <span class="text-danger" asp-validation-for="Product.Description"></span>
                             </div>
+                            <div class="form-group mb-3">
+                                <label class="form-label" asp-for="Product.Price">Title </label>
+                                <input type="text" class="form-control" asp-for="Product.Price">
+                                <span class="text-danger" asp-validation-for="Product.Price"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,10 +61,10 @@
                             <span class="text-danger" asp-validation-for="Product.CategoryId"></span>
                         </div>
                         <div class="form-group mb-3">
-                            <label asp-for="Product.FileCode" class="form-label">News Image</label>
+                            <label  asp-for="Product.ProductPhoto.FileCode"  class="form-label">News Image</label>
                             <input class="form-control" type="file" name="file" id="file">
-                             <input type="hidden" asp-for="Product.FileCode" />
-                            <span asp-validation-for="Product.FileCode" class="text-danger"></span>
+                             <input type="hidden" asp-for="Product.ProductPhoto.FileCode" />
+                            <span asp-validation-for="Product.ProductPhoto.FileCode" class="text-danger"></span>
                         </div>
                         <div class="bn">
                             <button type="submit" class="btn  btn-primary">Save</button>

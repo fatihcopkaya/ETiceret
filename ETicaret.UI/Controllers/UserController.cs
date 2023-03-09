@@ -18,55 +18,18 @@ namespace ETicaret.UI.Controllers
     public class UserController : Controller
     {
         EticaretContext c = new EticaretContext();
-
         private readonly IUserService _userService;
+        private readonly IProductService _productService;
 
-        public UserController(IUserDal userDal, IUserService userService)
+        public UserController(IUserService userService, IProductService productService)
         {
-
             _userService = userService;
+            _productService = productService;
         }
+
         public IActionResult Index()
         {
             return View();
-        }
-
-        public IActionResult Login(string returnUrl = null)
-        {
-            ViewData["ReturnUrl"] = returnUrl;
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Login(User user, string returnUrl)
-        {
-
-            var users = await _userService.SignInAsync(user);
-            if (!users.Success)
-            {
-                TempData["Error"] = users.Message;
-                return View(user);
-            }
-            TempData["Success"] = users.Message;
-            if (Url.IsLocalUrl(returnUrl))
-            {
-                return Redirect(returnUrl);
-            }
-            return RedirectToAction("Index", "Home");
-
-        }
-        public async Task<IActionResult> Register()
-        {
-            return View();
-        }
-        [HttpPost]
-        public async Task<IActionResult> Register(User user)
-        {
-
-            await _userService.Register(user);
-
-
-            return RedirectToAction(nameof(UserController.Login));
         }
         public async Task<IActionResult> AccountDetail()
         {
@@ -75,16 +38,13 @@ namespace ETicaret.UI.Controllers
             var row = await _userService.GetByIdAsync(UserId);
             if (row.Success)
             {
-
                 return View(row.Data);
-
-
             }
-
-
             return NotFound();
 
         }
+
+
         [HttpPost]
         public async Task<IActionResult> AccountDetail(User user)
         {
@@ -96,7 +56,7 @@ namespace ETicaret.UI.Controllers
                 try
                 {
 
-                   
+
                     user.IsActived = true;
                     var row = await _userService.UpdateAsync(user);
                     await _userService.SignInAsync(user);
@@ -114,6 +74,17 @@ namespace ETicaret.UI.Controllers
                 }
             }
             return RedirectToAction("Index", "Home");
+
+        }
+           public async Task<IActionResult> UserProfile(int Id)
+        {
+            ViewBag.x = Id;
+            var user = await _userService.GetByIdAsync(Id);
+            
+            return View(new ProductVM()
+            {
+                User = user.Data
+            });
 
         }
 

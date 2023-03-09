@@ -30,6 +30,11 @@ namespace DataAccessLayer.Concrete.Context
         public DbSet<ProductPhoto> ProductPhotos { get; set; }
         public DbSet<Document> Documents { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Adress> Adresses { get; set; }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -43,9 +48,9 @@ namespace DataAccessLayer.Concrete.Context
                 IsActived = true,
                 Role = "Admin"
             };
-             admin.PasswordHash = HashingHelper.CreatePasswordHashOld("Admin123", admin.SecretKey);
+            admin.PasswordHash = HashingHelper.CreatePasswordHashOld("Admin123", admin.SecretKey);
             modelBuilder.Entity<User>().HasData(admin);
-			base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder);
 
 
         }

@@ -27,5 +27,7 @@ namespace EntityLayer.Concrete
         public string FullName{get{return this.FirstName+" "+this.LastName;} private set{}}
         [NotMapped]
         public bool IsRegister { get; set; }
+        public virtual List<Cart> Cart { get; set; }
+        public virtual List<Offer> Offers { get; set; }
     }
 }

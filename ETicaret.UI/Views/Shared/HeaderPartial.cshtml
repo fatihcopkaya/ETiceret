@@ -1,29 +1,21 @@
-
 <!-- header section strats -->
 <header class="header_section">
     <div class="header_top">
         <div class="container-fluid">
             <div class="top_nav_container">
-                <div class="contact_nav">
-                    <a href="">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <span>
-                            Call : +01 123455678990
-                        </span>
-                    </a>
-                    <a href="">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <span>
-                            Email : demo@gmail.com
-                        </span>
-                    </a>
-                </div>
-                <from class="search_form">
-                    <input type="text" class="form-control" placeholder="Search here...">
-                    <button class="" type="submit">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                </from>
+                <div class="container">  
+                    @using (@Html.BeginForm())
+                {
+                    <div class="form-group">
+                        <div style="width:50%;float:left">
+                            @Html.TextBox("search", null,new {@class="form-control",@placeholder="Search For"} )
+                        </div>
+                        <div style="float: left;">
+                            <input type="submit" name="btn" value="Search" class="btn btn-info " />
+                        </div>
+                    </div>
+                }</div>
+              
                 @if (User.Identity.IsAuthenticated)
                 {
                     <div class="user_option_box">
@@ -34,7 +26,7 @@
                                 Account
                             </span>
                         </a>
-                        <a href="" class="cart-link">
+                        <a asp-controller="Cart" asp-action="Index" class="cart-link">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <span>
                                 Cart
@@ -46,7 +38,7 @@
                 {
                     <div class="user_option_box">
 
-                        <a href="/User/Login/" class="account-link">
+                        <a href="/Login/Login/" class="account-link">
                             <i class="fa fa-user" aria-hidden="true"></i>
                             <span>
                                 Login/Register

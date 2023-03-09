@@ -19,6 +19,10 @@ namespace BusiniessLayer.Abstract
         Task<IResult> UpdatePhotoAsync(ProductPhoto productPhoto);
         Task<IResult> DeletePhotoAsync(ProductPhoto productPhoto);
         Task<IDataResult<List<Product>>> GetProductList();
+        Task<IDataResult<List<Product>>> GetProductListByCart(int id);
+         Task<IDataResult<List<Product>>> GetProductListBySearch(string search);
+        
+
 
 
 

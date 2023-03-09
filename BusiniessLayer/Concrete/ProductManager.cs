@@ -45,7 +45,7 @@ namespace BusiniessLayer.Concrete
 
         public async Task<IDataResult<Product>> GetByProductIdAsync(int ProductId)
         {
-            var row = await _productdal.GetFirstOrDefaultAsync(x => x.Id == ProductId, x => x.ProductPhotos);
+            var row = await _productdal.GetFirstOrDefaultAsync(x => x.Id == ProductId, x => x.ProductPhoto);
             if (row != null)
             {
                 return new SuccessDataResult<Product>(row);
@@ -57,7 +57,7 @@ namespace BusiniessLayer.Concrete
         {
              var resultList = await _productdal.GetListAsync(x => x.IsActived == true,
             x => x.OrderBy(x => x.OrderBy),
-            x => x.ProductPhotos);
+            x => x.ProductPhoto);
             return new SuccessDataResult<List<Product>>(resultList.ToList());
         }
 
@@ -71,7 +71,7 @@ namespace BusiniessLayer.Concrete
         {
             var resultList = await _productdal.GetListAsync(x => x.IsActived == true && x.UserId == id,
             x => x.OrderBy(x => x.OrderBy),
-            x => x.ProductPhotos);
+            x => x.ProductPhoto);
             return new SuccessDataResult<List<Product>>(resultList.ToList());
         }
 
@@ -86,6 +86,23 @@ namespace BusiniessLayer.Concrete
         {
             await _productdal.UpdatePhoto(productPhoto);
             return new SuccessResult(Messages.UpdateMessage);
+        }
+
+        public async Task<IDataResult<List<Product>>> GetProductListByCart(int id)
+        {
+            var resultList = await _productdal.GetListAsync(x => x.IsActived == true && x.Id == id,
+            x => x.OrderBy(x => x.OrderBy),
+            x => x.ProductPhoto);
+            return new SuccessDataResult<List<Product>>(resultList.ToList());
+        }
+
+        public async Task<IDataResult<List<Product>>> GetProductListBySearch(string search)
+        {
+            var resultList = await _productdal.GetListAsync(x=>x.Title.Contains(search)|| x.Category.Title.Contains(search),
+            x => x.OrderBy(x => x.OrderBy),
+            x => x.ProductPhoto);
+            return new SuccessDataResult<List<Product>>(resultList.ToList());
+
         }
     }
 }

@@ -1,0 +1,104 @@
+@model OfferVM
+
+@{
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
+}
+<html>
+
+<head>
+    <style>
+        body {
+            margin-top: 20px;
+            background: #eee;
+        }
+
+        .ui-w-40 {
+            width: 40px !important;
+            height: auto;
+        }
+
+        .card {
+            box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .08);
+        }
+
+        .ui-product-color {
+            display: inline-block;
+            overflow: hidden;
+            margin: .144em;
+            width: .875rem;
+            height: .875rem;
+            border-radius: 10rem;
+            -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container px-3 my-5 clearfix">
+        <!-- Shopping cart table -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Shopping Cart</h2>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered m-0">
+                        <thead>
+                            <tr>
+                                <!-- Set columns width -->
+                                <th class="text-center py-3 px-4" style="min-width: 400px;">Product Name &amp; Details
+                                </th>
+                                <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
+                                <th class="text-center py-3 px-4" style="width: 120px;">Offer Price</th>
+                                <th class="text-right py-3 px-4" style="width: 100px;">Accept</th>
+                                <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a href="#"
+                                        class="shop-tooltip float-none text-light" title=""
+                                        data-original-title="Clear cart"><i class="ino ion-md-trash"></i></a></th>
+                            </tr>
+                        </thead>
+
+                        @foreach (var item in Model.Offers)
+                        {
+                            <tbody>
+                                <tr>
+                                    @foreach (var obj in Model.Products)
+                                    {
+                                        <td class="p-4">
+                                            <div class="media align-items-center">
+                                                <img src="@await Component.InvokeAsync("Image", new { FileCode = obj.ProductPhoto.FileCode })"
+                                                    class="d-block ui-w-40 ui-bordered mr-4" alt="">
+
+                                                <div class="media-body">
+                                                    <a href="#" class="d-block text-dark">@obj.Title</a>
+                                                    <small>
+                                                        <span class="text-muted">@obj.Description</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right font-weight-semibold align-middle p-4">@obj.Price</td>
+                                    }
+                                    <td class="text-right font-weight-semibold align-middle p-4">@item.OfferPrice</td>
+                                    <td>
+                                        <form asp-action="Accept" asp-controller="Offer" method="post"
+                                        asp-route-id="@item.Id">
+                                            <button class="btn btn-primary mx-2">Accept</button>
+                                        </form>
+                                    </td>
+                                    <td class="text-center align-middle px-0"><a href="#"
+                                            class="shop-tooltip close float-none text-danger" title=""
+                                            data-original-title="Remove">×</a></td>
+                                </tr>
+
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

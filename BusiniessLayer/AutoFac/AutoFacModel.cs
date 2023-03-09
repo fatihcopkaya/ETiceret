@@ -34,6 +34,26 @@ namespace BusiniessLayer.AutoFac
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserRepository>().As<IUserDal>();
             #endregion
+            
+            #region Comment
+            builder.RegisterType<CommentManager>().As<ICommentService>();
+            builder.RegisterType<EfCommentRepository>().As<ICommentDal>();
+            #endregion
+
+             #region Cart
+            builder.RegisterType<CartManager>().As<ICartService>();
+            builder.RegisterType<EfCartRepository>().As<ICartDal>();
+            #endregion
+
+             #region Adress
+            builder.RegisterType<AdressManager>().As<IAdressService>();
+            builder.RegisterType<EfAdressRepository>().As<IAdressDal>();
+            #endregion
+
+             #region Adress
+            builder.RegisterType<OfferManager>().As<IOfferService>();
+            builder.RegisterType<EfOfferRepository>().As<IOfferDal>();
+            #endregion
 
         }
     }
