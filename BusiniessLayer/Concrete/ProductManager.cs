@@ -55,9 +55,9 @@ namespace BusiniessLayer.Concrete
 
         public async Task<IDataResult<List<Product>>> GetProductList()
         {
-             var resultList = await _productdal.GetListAsync(x => x.IsActived == true,
-            x => x.OrderBy(x => x.OrderBy),
-            x => x.ProductPhoto);
+            var resultList = await _productdal.GetListAsync(x => x.IsActived == true,
+           x => x.OrderBy(x => x.OrderBy),
+           x => x.ProductPhoto);
             return new SuccessDataResult<List<Product>>(resultList.ToList());
         }
 
@@ -98,11 +98,19 @@ namespace BusiniessLayer.Concrete
 
         public async Task<IDataResult<List<Product>>> GetProductListBySearch(string search)
         {
-            var resultList = await _productdal.GetListAsync(x=>x.Title.Contains(search)|| x.Category.Title.Contains(search),
+            var resultList = await _productdal.GetListAsync(x => x.Title.Contains(search) || x.Category.Title.Contains(search),
             x => x.OrderBy(x => x.OrderBy),
             x => x.ProductPhoto);
             return new SuccessDataResult<List<Product>>(resultList.ToList());
 
+        }
+
+        public async Task<IDataResult<List<Product>>> GetProductListByCategory(int? Id)
+        {
+            var list = await _productdal.GetListAsync(x => x.IsActived == true && x.CategoryId == Id,
+            x => x.OrderBy(x => x.OrderBy),
+            x => x.ProductPhoto);
+            return new SuccessDataResult<List<Product>>(list.ToList());
         }
     }
 }

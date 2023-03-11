@@ -135,36 +135,6 @@ namespace ETicaret.UI.Areas.Cms.Controllers
             return NotFound();
 
         }
-        [HttpPost]
-        public async Task<IActionResult> Order(List<Order> orders)
-        {
-            try
-            {
-                foreach (var item in orders)
-                {
-                    var category = await _categoryservice.GetByCategoryIdAsync(item.Id);
-                    if (category == null)
-                    {
-                        continue;
-                    }
-                    category.Data.OrderBy = item.Place;
-                    await _categoryservice.GetOrderByCategoryAsync(category.Data);
-                }
-                return Ok(new
-                {
-                    Status = 200,
-                    Message = Messages.UpdateMessage
-                });
-            }
-            catch (Exception ex)
-            {
-                return Ok(new
-                {
-                    Status = 404,
-                    ex.Message
-                });
-            }
-        }
         public async Task<IActionResult> SubCategory(int? Id)
         {
             if (Id != null)

@@ -142,6 +142,12 @@ namespace ETicaret.UI.Controllers
              return NotFound();
 
         }
+        // [HttpPost]
+        // public async Task<IActionResult> Pick(int AdressId)
+        // {
+        //     await
+        // }
+        
 
 
 

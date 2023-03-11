@@ -50,9 +50,14 @@ namespace BusiniessLayer.AutoFac
             builder.RegisterType<EfAdressRepository>().As<IAdressDal>();
             #endregion
 
-             #region Adress
+             #region Offer
             builder.RegisterType<OfferManager>().As<IOfferService>();
             builder.RegisterType<EfOfferRepository>().As<IOfferDal>();
+            #endregion
+
+             #region Order
+            builder.RegisterType<OrderManager>().As<IOrderService>();
+            builder.RegisterType<EfOrderRepository>().As<IOrderDal>();
             #endregion
 
         }

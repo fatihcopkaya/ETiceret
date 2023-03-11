@@ -16,17 +16,33 @@ public class HomeController : Controller
     private readonly ICommentService _commentService;
     private readonly IUserService _userService;
     private readonly ICartService _cartService;
+    private readonly ICategoryService _categoryService;
 
-    public HomeController(IProductService productService, ICommentService commentService, IUserService userService, ICartService cartService)
+    public HomeController(IProductService productService, ICommentService commentService, IUserService userService, ICartService cartService, ICategoryService categoryService)
     {
         _productService = productService;
         _commentService = commentService;
         _userService = userService;
         _cartService = cartService;
+        _categoryService = categoryService;
     }
 
     public async Task<IActionResult> Index(string search)
     {
+        var list = await _productService.GetProductList();
+        if (!string.IsNullOrEmpty(search))
+        { 
+            list = await _productService.GetProductListBySearch(search);
+        }
+        return View(list.Data);
+    }
+    public async Task<IActionResult> Products(string search,int? Id)
+    {
+        if(Id != null || Id>0)
+        {
+            var categoryList = await _productService.GetProductListByCategory(Id.Value);
+            return View(categoryList.Data);
+        }
         var list = await _productService.GetProductList();
         if (!string.IsNullOrEmpty(search))
         {
@@ -95,6 +111,7 @@ public class HomeController : Controller
 
         return RedirectToAction("Item", new { Id = product.Data.Id });
     }
+   
 
 
 

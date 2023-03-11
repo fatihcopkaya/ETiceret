@@ -254,7 +254,48 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Offer");
+                    b.ToTable("Offers");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("AdressId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("GuId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsActived")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdressId");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Product", b =>
@@ -390,12 +431,12 @@ namespace DataAccessLayer.Migrations
                             Id = 1,
                             Email = "admin@admin.com",
                             FirstName = "Admin",
-                            GuId = "e71631d00f5a4407a0cba44242d44676",
+                            GuId = "c41a2ccc8ab942d6ad6e2688aff4e4da",
                             IsActived = true,
                             LastName = "Admin",
-                            PasswordHash = "0c82003d7acc2653b2b6495f2e113991a35a75f44de9573ce634110eace34e18bb554c0f8abc61c73f6c0241e097ca134d1d996a9b45b7c982e16dafa22197b0",
+                            PasswordHash = "f71f10798fd95b331526bc99cdb81251aebe57914ae35f8be385a2e0310490e28fdad47e7d02ef369603fdbc10b661811ddbaef59d708d70ee35b80978a3c15c",
                             Role = "Admin",
-                            SecretKey = "11fd462ef3f044bf8a829c44aeebf0f53/9/202342659PM",
+                            SecretKey = "f5a177b46a5d460a99f6920afd55e5d53/11/202360531PM",
                             Token = "",
                             TokenExpiryDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -472,6 +513,41 @@ namespace DataAccessLayer.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Order", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.Adress", "Adress")
+                        .WithMany()
+                        .HasForeignKey("AdressId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concrete.Cart", "Cart")
+                        .WithMany()
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concrete.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concrete.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Adress");
+
+                    b.Navigation("Cart");
 
                     b.Navigation("Product");
 

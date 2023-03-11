@@ -33,6 +33,8 @@ namespace DataAccessLayer.Concrete.Context
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Adress> Adresses { get; set; }
+        public DbSet<Offer> Offers { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
 
 

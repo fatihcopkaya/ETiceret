@@ -6801,6 +6801,482 @@
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/.DS_Store",
+      "PackagePath": "staticwebassets/dropdown-12/.DS_Store"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/css/.DS_Store",
+      "PackagePath": "staticwebassets/dropdown-12/css/.DS_Store"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/dropdown-12/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/dropdown-12/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/css/owl.carousel.min.css",
+      "PackagePath": "staticwebassets/dropdown-12/css/owl.carousel.min.css"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/css/style.css",
+      "PackagePath": "staticwebassets/dropdown-12/css/style.css"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/.DS_Store",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/.DS_Store"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/icomoon/Read Me.txt",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/icomoon/Read Me.txt"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/icomoon/demo-files/demo.css",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/icomoon/demo-files/demo.css"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/icomoon/demo-files/demo.js",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/icomoon/demo-files/demo.js"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/icomoon/demo.html",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/icomoon/demo.html"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/icomoon/fonts/icomoon.eot",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/icomoon/fonts/icomoon.eot"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/icomoon/fonts/icomoon.svg",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/icomoon/fonts/icomoon.svg"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/icomoon/fonts/icomoon.ttf",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/icomoon/fonts/icomoon.ttf"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/icomoon/fonts/icomoon.woff",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/icomoon/fonts/icomoon.woff"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/icomoon/selection.json",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/icomoon/selection.json"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/fonts/icomoon/style.css",
+      "PackagePath": "staticwebassets/dropdown-12/fonts/icomoon/style.css"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/images/.DS_Store",
+      "PackagePath": "staticwebassets/dropdown-12/images/.DS_Store"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/images/hero_1.jpg",
+      "PackagePath": "staticwebassets/dropdown-12/images/hero_1.jpg"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/images/hero_2.jpg",
+      "PackagePath": "staticwebassets/dropdown-12/images/hero_2.jpg"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/images/hero_3.jpg",
+      "PackagePath": "staticwebassets/dropdown-12/images/hero_3.jpg"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/index.html",
+      "PackagePath": "staticwebassets/dropdown-12/index.html"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/dropdown-12/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/js/jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets/dropdown-12/js/jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/js/main.js",
+      "PackagePath": "staticwebassets/dropdown-12/js/main.js"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/js/owl.carousel.min.js",
+      "PackagePath": "staticwebassets/dropdown-12/js/owl.carousel.min.js"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/js/popper.min.js",
+      "PackagePath": "staticwebassets/dropdown-12/js/popper.min.js"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/main.html",
+      "PackagePath": "staticwebassets/dropdown-12/main.html"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/.DS_Store",
+      "PackagePath": "staticwebassets/dropdown-12/scss/.DS_Store"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_alert.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_alert.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_badge.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_badge.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_breadcrumb.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_breadcrumb.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_button-group.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_button-group.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_buttons.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_buttons.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_card.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_card.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_carousel.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_carousel.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_close.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_close.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_code.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_code.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_custom-forms.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_custom-forms.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_dropdown.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_dropdown.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_forms.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_forms.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_functions.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_functions.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_grid.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_grid.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_images.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_images.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_input-group.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_input-group.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_jumbotron.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_jumbotron.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_list-group.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_list-group.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_media.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_media.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_mixins.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_mixins.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_modal.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_modal.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_nav.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_nav.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_navbar.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_navbar.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_pagination.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_pagination.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_popover.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_popover.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_print.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_print.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_progress.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_progress.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_reboot.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_reboot.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_root.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_root.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_spinners.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_spinners.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_tables.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_tables.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_toasts.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_toasts.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_tooltip.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_tooltip.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_transitions.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_transitions.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_type.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_type.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_utilities.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_utilities.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/_variables.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/_variables.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/bootstrap-grid.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/bootstrap-grid.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/bootstrap-reboot.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/bootstrap.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/bootstrap.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_alert.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_alert.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_background-variant.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_background-variant.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_badge.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_badge.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_border-radius.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_border-radius.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_box-shadow.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_box-shadow.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_breakpoints.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_breakpoints.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_buttons.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_buttons.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_caret.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_caret.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_clearfix.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_clearfix.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_deprecate.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_deprecate.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_float.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_float.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_forms.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_forms.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_gradients.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_gradients.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_grid-framework.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_grid-framework.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_grid.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_grid.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_hover.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_hover.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_image.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_image.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_list-group.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_list-group.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_lists.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_lists.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_nav-divider.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_nav-divider.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_pagination.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_pagination.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_reset-text.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_reset-text.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_resize.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_resize.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_screen-reader.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_screen-reader.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_size.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_size.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_table-row.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_table-row.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_text-emphasis.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_text-emphasis.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_text-hide.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_text-hide.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_text-truncate.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_text-truncate.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_transition.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_transition.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/mixins/_visibility.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/mixins/_visibility.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_align.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_align.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_background.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_background.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_borders.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_borders.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_clearfix.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_clearfix.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_display.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_display.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_embed.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_embed.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_flex.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_flex.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_float.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_float.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_overflow.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_overflow.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_position.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_position.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_screenreaders.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_screenreaders.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_shadows.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_shadows.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_sizing.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_sizing.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_spacing.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_spacing.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_stretched-link.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_stretched-link.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_text.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_text.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/utilities/_visibility.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/utilities/_visibility.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/bootstrap/vendor/_rfs.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/bootstrap/vendor/_rfs.scss"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/dropdown-12/scss/style.scss",
+      "PackagePath": "staticwebassets/dropdown-12/scss/style.scss"
+    },
+    {
       "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
@@ -6843,6 +7319,10 @@
     {
       "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/3a430255957c4dc.png",
       "PackagePath": "staticwebassets/file/product/3a430255957c4dc.png"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/3c90f18e51694cf.png",
+      "PackagePath": "staticwebassets/file/product/3c90f18e51694cf.png"
     },
     {
       "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/3d19219e0c0d474.jpeg",
@@ -6979,6 +7459,10 @@
     {
       "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/d45796e698844f7.jpeg",
       "PackagePath": "staticwebassets/file/product/d45796e698844f7.jpeg"
+    },
+    {
+      "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/e242544ab12147a.jpeg",
+      "PackagePath": "staticwebassets/file/product/e242544ab12147a.jpeg"
     },
     {
       "Id": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/e7b78e11946d488.png",
