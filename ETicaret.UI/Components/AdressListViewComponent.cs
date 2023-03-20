@@ -20,7 +20,7 @@ namespace ETicaret.UI.Components
         {
             var usermail = User.Identity.Name;
             var userId = c.Users.Where(x => x.FirstName == usermail).Select(y => y.Id).FirstOrDefault(); 
-            var list = await _adressService.GetAdressList(userId);
+            var list = await _adressService.GetAdressListByUser(userId);
             return View(list.Data);
         }
     }

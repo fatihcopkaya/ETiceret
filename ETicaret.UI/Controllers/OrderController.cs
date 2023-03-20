@@ -33,9 +33,9 @@ namespace ETicaret.UI.Controllers
         {
             var usermail = User.Identity.Name;
             var userId = c.Users.Where(x => x.FirstName == usermail).Select(y => y.Id).FirstOrDefault();
-            var products = await _productService.GetProductListByCart(userId);
-            var adresses = await _adressService.GetAdressList(userId);
-            var carts = await _cartService.GetCartListAsync(userId);
+            var products = await _productService.GetProductListByOrder(userId);
+            var adresses = await _adressService.GetAdressListByOrder(userId);
+            var carts = await _cartService.GetCartListByOrderAsync(userId);
             return View(new OrderVM()
             {
                 Products = products.Data,
@@ -48,8 +48,9 @@ namespace ETicaret.UI.Controllers
         {
             var usermail = User.Identity.Name;
             var userId = c.Users.Where(x => x.FirstName == usermail).Select(y => y.Id).FirstOrDefault();
+            var cart = await _cartService.GetCartIdByUser(userId);
             var products = await _productService.GetProductListByCart(userId);
-            var adresses = await _adressService.GetAdressList(userId);
+            var adresses = await _adressService.GetAdressListByUser(userId);
             var carts = await _cartService.GetCartListAsync(userId);
             return View(new OrderVM()
             {
@@ -63,25 +64,29 @@ namespace ETicaret.UI.Controllers
         {
             var usermail = User.Identity.Name;
             var userId = c.Users.Where(x => x.FirstName == usermail).Select(y => y.Id).FirstOrDefault();
-            var cart = await _cartService.GetCartIdByUser(userId);
-
+            var data = await _cartService.GetCartListAsync(userId);
             try
             {
-                var add = await _orderService.AddAsync(new Order()
+                foreach (var item in data.Data)
                 {
-                    AdressId = Id,
-                    UserId = userId,
-                    ProductId = cart.Data.ProductId,
-                    CartId = cart.Data.Id,
-                    CreateDate = DateTime.Now,
-                    IsActived = true
+                    var add = await _orderService.AddAsync(new Order()
+                    {
+                        AdressId = Id,
+                        UserId = userId,
+                        ProductId = item.ProductId,
+                        CartId = item.Id,
+                        CreateDate = DateTime.Now,
+                        IsActived = true
 
-                });
-                if (add.Success)
-                {
+                    });
                     TempData["Success"] = add.Message;
-                    return RedirectToAction("Index", "Order");
+
                 }
+
+
+
+                return RedirectToAction("Index", "Order");
+
 
             }
             catch (Exception ex)

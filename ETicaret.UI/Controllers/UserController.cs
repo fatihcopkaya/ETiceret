@@ -9,6 +9,7 @@ using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete.Context;
 using EntityLayer.Concrete;
 using ETicaret.UI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -26,11 +27,12 @@ namespace ETicaret.UI.Controllers
             _userService = userService;
             _productService = productService;
         }
-
+        [Authorize(Roles = "User")]
         public IActionResult Index()
         {
             return View();
         }
+        [Authorize(Roles = "User")]
         public async Task<IActionResult> AccountDetail()
         {
             var usermail = User.Identity.Name;
@@ -44,7 +46,7 @@ namespace ETicaret.UI.Controllers
 
         }
 
-
+        [Authorize(Roles = "User")]
         [HttpPost]
         public async Task<IActionResult> AccountDetail(User user)
         {
@@ -76,11 +78,11 @@ namespace ETicaret.UI.Controllers
             return RedirectToAction("Index", "Home");
 
         }
-           public async Task<IActionResult> UserProfile(int Id)
+        public async Task<IActionResult> UserProfile(int Id)
         {
             ViewBag.x = Id;
             var user = await _userService.GetByIdAsync(Id);
-            
+
             return View(new ProductVM()
             {
                 User = user.Data

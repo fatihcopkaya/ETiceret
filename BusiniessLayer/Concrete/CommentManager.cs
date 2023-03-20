@@ -33,16 +33,21 @@ namespace BusiniessLayer.Concrete
 
         public async Task<IDataResult<Comment>> GetByCommentIdAsync(int CommentId)
         {
-           var row = await _commentDal.GetFirstOrDefaultAsync(x=>x.Id == CommentId);
-           if(row != null)
-           {
-            return new SuccessDataResult<Comment>(row);
-           }
-           return new ErrorDataResult<Comment>(new Comment(), Messages.RecordMessage);
+            var row = await _commentDal.GetFirstOrDefaultAsync(x => x.Id == CommentId);
+            if (row != null)
+            {
+                return new SuccessDataResult<Comment>(row);
+            }
+            return new ErrorDataResult<Comment>(new Comment(), Messages.RecordMessage);
 
         }
 
-        public async Task<IDataResult<List<Comment>>> GetCommentList(int Id)
+        public async Task<IDataResult<List<Comment>>> GetCommentList()
+        {
+           return new SuccessDataResult<List<Comment>>((await _commentDal.GetListAsync(x=>x.IsActived == true)).ToList());
+        }
+
+        public async Task<IDataResult<List<Comment>>> GetCommentListByPorduct(int Id)
         {
             return new SuccessDataResult<List<Comment>>((await _commentDal.GetListAsync(x => x.IsActived == true &&
              x.Product.Id == Id)).ToList());
@@ -54,7 +59,7 @@ namespace BusiniessLayer.Concrete
             return new SuccessDataResult<Comment>(comment, Messages.UpdateMessage);
         }
 
-       
+
 
     }
 }

@@ -31,7 +31,13 @@ namespace BusiniessLayer.Concrete
             return new SuccessDataResult<Adress>(Messages.DeleteMessage);
         }
 
-        public async Task<IDataResult<List<Adress>>> GetAdressList(int Id)
+        public async Task<IDataResult<List<Adress>>> GetAdressListByOrder(int Id)
+        {
+             var list = await _adressDal.GetListAsync(x=>x.IsActived == true && x.Order.AdressId == x.Id && x.UserId == Id && x.UserId == x.Order.UserId);
+          return new SuccessDataResult<List<Adress>>(list.ToList());
+        }
+
+        public async Task<IDataResult<List<Adress>>> GetAdressListByUser(int Id)
         {
           var list = await _adressDal.GetListAsync(x=>x.IsActived == true && x.UserId == Id);
           return new SuccessDataResult<List<Adress>>(list.ToList());

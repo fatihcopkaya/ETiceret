@@ -13,6 +13,7 @@ namespace BusiniessLayer.Abstract
         Task<IDataResult<List<Offer>>> GetOfferList(int UserId); 
          Task<IDataResult<Offer>> GetById(int UserId); 
          Task<IResult> DeleteAsync(Offer offer);
+         Task<IDataResult<Offer>> GetIdByTaken(int UserId); 
 
         
     }

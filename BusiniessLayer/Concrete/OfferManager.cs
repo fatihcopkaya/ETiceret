@@ -41,6 +41,16 @@ namespace BusiniessLayer.Concrete
             return new ErrorDataResult<Offer>(new Offer(), Messages.RecordMessage);
         }
 
+        public async Task<IDataResult<Offer>> GetIdByTaken(int UserId)
+        {
+           var row = await _offerDal.GetFirstOrDefaultAsync(x=>x.TakeUserId == UserId);
+            if (row != null)
+            {
+                return new SuccessDataResult<Offer>(row);
+            }
+            return new ErrorDataResult<Offer>(new Offer(), Messages.RecordMessage);
+        }
+
         public async Task<IDataResult<List<Offer>>> GetOfferList(int UserId)
         {
             var list = await _offerDal.GetListAsync(x=>x.TakeUserId == UserId && x.IsActived==true);

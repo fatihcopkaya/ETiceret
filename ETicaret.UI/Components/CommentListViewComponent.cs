@@ -21,7 +21,7 @@ namespace ETicaret.UI.Components
         public async Task<IViewComponentResult> InvokeAsync(int id)
         {
            
-            var list = await _commentService.GetCommentList(id);
+            var list = await _commentService.GetCommentListByPorduct(id);
             return View(list.Data);
         }
     }

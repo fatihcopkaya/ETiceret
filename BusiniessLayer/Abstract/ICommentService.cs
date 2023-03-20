@@ -13,6 +13,7 @@ namespace BusiniessLayer.Abstract
        Task<IDataResult<Comment>> AddAsync(Comment comment);
        Task<IResult> UpdateAsync(Comment comment);
        Task<IResult> DeleteAsync(Comment comment);
-       Task<IDataResult<List<Comment>>> GetCommentList(int Id);
+       Task<IDataResult<List<Comment>>> GetCommentListByPorduct(int Id);
+       Task<IDataResult<List<Comment>>> GetCommentList();
     }
 }

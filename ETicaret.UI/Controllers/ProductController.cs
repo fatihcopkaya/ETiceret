@@ -9,12 +9,14 @@ using CoreLayer.Utilities.Result;
 using DataAccessLayer.Concrete.Context;
 using EntityLayer.Concrete;
 using ETicaret.UI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace ETicaret.UI.Controllers
 {
 
+    [Authorize(Roles = "User")]
     public class ProductController : Controller
     {
         EticaretContext c = new EticaretContext();
@@ -97,8 +99,8 @@ namespace ETicaret.UI.Controllers
                         UserId = productVM.Product.UserId,
                         Price = productVM.Product.Price,
                         CreatedTime = DateTime.Now
-                        
-                        
+
+
                     });
                     if (product.Success)
                     {
@@ -128,15 +130,15 @@ namespace ETicaret.UI.Controllers
             if (Id != null)
             {
                 var result = await _productService.GetByProductIdAsync(Id.Value);
-                
+
                 if (result.Success)
                 {
                     var category = await _categoryService.GetByCategoryIdAsync(result.Data.CategoryId);
 
                     return View(new ProductVM
                     {
-                        
-                        
+
+
                         Product = result.Data,
                         ProductPhoto = result.Data.ProductPhoto,
                         Categories = (await _categoryService.GetCategoryParentList(category.Data.ParentId.Value)).Data.ToList()
@@ -161,21 +163,21 @@ namespace ETicaret.UI.Controllers
                     if (productVM.Product.ProductPhoto.FileCode != null || productVM.Product.ProductPhoto.FileCode != string.Empty)
                     {
                         IDataResult<string> FileCode = await _documentService.UpdateUploadAsync(file, productVM.Product.ProductPhoto.FileCode, "/file/product/");
-                        
-                        
+
+
                         if (!FileCode.Success)
                         {
-                             
+
                             TempData["Warning"] = FileCode.Message;
                             return View(productVM);
                         }
-                      
+
                     }
                 }
                 productVM.Product.SlugUrl = UrlSeoHelper.UrlSeo(productVM.Product.Title);
                 productVM.Product.Id = Id.Value;
                 productVM.Product.IsActived = true;
-            
+
                 var update = await _productService.UpdateAsync(productVM.Product);
                 if (update.Success)
                 {

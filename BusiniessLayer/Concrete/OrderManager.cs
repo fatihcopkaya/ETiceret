@@ -40,5 +40,15 @@ namespace BusiniessLayer.Concrete
             }
               return new ErrorDataResult<Order>(new Order(), Messages.RecordMessage);
         }
+
+        public async Task<IDataResult<Order>> GetOrderIdByUser(int Id)
+        {
+            var row = await _orderDal.GetFirstOrDefaultAsync(x=>x.UserId == Id);
+          if (row != null)
+            {
+                return new SuccessDataResult<Order>(row);
+            }
+              return new ErrorDataResult<Order>(new Order(), Messages.RecordMessage);
+        }
     }
 }

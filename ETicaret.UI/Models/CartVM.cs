@@ -8,7 +8,7 @@ namespace ETicaret.UI.Models
 {
     public class CartVM
     {
-        public Cart Cart { get; set; }
+        
         public List<Product> Products { get; set; }
         public List<Cart> Carts { get; set; }
     }

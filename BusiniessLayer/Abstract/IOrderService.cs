@@ -12,5 +12,6 @@ namespace BusiniessLayer.Abstract
         Task<IDataResult<Order>> AddAsync(Order order);
         Task<IDataResult<List<Order>>> GetListOrder();
         Task<IDataResult<Order>> GetOrderId(int Id);
+         Task<IDataResult<Order>> GetOrderIdByUser(int Id);
     }
 }

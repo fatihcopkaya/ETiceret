@@ -31,9 +31,11 @@ namespace BusiniessLayer.Concrete
             return new SuccessDataResult<Cart>(Messages.DeleteMessage);
         }
 
+
+
         public async Task<IDataResult<Cart>> GetCartIdByUser(int Id)
         {
-              var row = await _cartDal.GetFirstOrDefaultAsync(x => x.UserId ==Id);
+            var row = await _cartDal.GetFirstOrDefaultAsync(x => x.UserId == Id);
             if (row != null)
             {
                 return new SuccessDataResult<Cart>(row);
@@ -43,7 +45,13 @@ namespace BusiniessLayer.Concrete
 
         public async Task<IDataResult<List<Cart>>> GetCartListAsync(int Id)
         {
-          return new SuccessDataResult<List<Cart>>((await _cartDal.GetListAsync(x => x.IsActived == true && x.UserId == Id)).ToList());
+            return new SuccessDataResult<List<Cart>>((await _cartDal.GetListAsync(x => x.IsActived == true && x.UserId == Id)).ToList());
+        }
+
+        public async Task<IDataResult<List<Cart>>> GetCartListByOrderAsync(int Id)
+        {
+            var list = await _cartDal.GetListAsync(x=>x.Id == x.Order.CartId && x.IsActived == true && x.UserId == Id);
+            return new SuccessDataResult<List<Cart>>(list.ToList());
         }
 
         public async Task<IResult> UpdateAsync(Cart cart)

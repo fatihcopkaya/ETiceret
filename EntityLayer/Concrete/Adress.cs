@@ -17,5 +17,7 @@ namespace EntityLayer.Concrete
         public bool IsActived { get; set; }
         public string AdressDetail { get; set; }
         public virtual User User { get; set; }
+         public virtual Order Order { get; set; }
+
     }
 }

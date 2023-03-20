@@ -14,6 +14,9 @@ namespace BusiniessLayer.Abstract
         Task<IResult> UpdateAsync(Cart cart);
         Task<IResult> DeleteAsync(Cart cart);
         Task<IDataResult<Cart>> GetCartIdByUser(int Id);
+        Task<IDataResult<List<Cart>>> GetCartListByOrderAsync(int Id);
+        
+
 
     }
 }

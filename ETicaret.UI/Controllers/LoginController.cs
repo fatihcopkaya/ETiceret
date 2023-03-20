@@ -32,6 +32,10 @@ namespace ETicaret.UI.Controllers
                 TempData["Error"] = users.Message;
                 return View(user);
             }
+            if(users.Data.Role == "Admin")
+            {
+                return RedirectToAction("Category","Cms");
+            }
             TempData["Success"] = users.Message;
             if (Url.IsLocalUrl(returnUrl))
             {

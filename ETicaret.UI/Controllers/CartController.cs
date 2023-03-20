@@ -7,15 +7,17 @@ using BusiniessLayer.Abstract;
 using DataAccessLayer.Concrete.Context;
 using EntityLayer.Concrete;
 using ETicaret.UI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace ETicaret.UI.Controllers
 {
 
+    [Authorize(Roles = "User")]
     public class CartController : Controller
     {
-        
+
         EticaretContext c = new EticaretContext();
         private readonly IUserService _userService;
         private readonly ICartService _cartService;
@@ -32,15 +34,14 @@ namespace ETicaret.UI.Controllers
         {
             var usermail = User.Identity.Name;
             var UserId = c.Users.Where(x => x.FirstName == usermail).Select(y => y.Id).FirstOrDefault();
-            var cart = await _cartService.GetCartIdByUser(UserId);
             var list = await _cartService.GetCartListAsync(UserId);
-            var productList = await _productService.GetProductListByCart(cart.Data.ProductId);
+            var productList = await _productService.GetProductListByCart(UserId);
             return View(new CartVM()
             {
-               Products = productList.Data,
-               Carts = list.Data
+                Products = productList.Data,
+                Carts = list.Data
             });
-    
+
 
         }
         [HttpPost]
@@ -59,8 +60,8 @@ namespace ETicaret.UI.Controllers
                     IsActived = true,
                     Total = cart.Quantity * product.Data.Price,
                     CreatedDate = DateTime.Now
-                    
-                    
+
+
                 });
                 if (row.Success)
                 {

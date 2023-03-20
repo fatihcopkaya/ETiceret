@@ -26,10 +26,10 @@ options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 }).AddCookie(options =>
 {
-options.AccessDeniedPath = new PathString("/cms/account/login/");
-options.LoginPath = new PathString("/cms/account/login/");
+options.AccessDeniedPath = new PathString("/login/login/");
+options.LoginPath = new PathString("/login/login/");
 options.LogoutPath = new PathString("/cms/account/logout/");
-options.Cookie.Name = ".News365.net";
+options.Cookie.Name = ".Etico.net";
 options.Cookie.SameSite = SameSiteMode.Lax;
 options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
 options.Cookie.IsEssential = true;

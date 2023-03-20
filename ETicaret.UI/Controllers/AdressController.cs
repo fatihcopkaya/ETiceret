@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using BusiniessLayer.Abstract;
 using DataAccessLayer.Concrete.Context;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace ETicaret.UI.Controllers
 {
 
+    [Authorize(Roles = "User")]
     public class AdressController : Controller
     {
         EticaretContext c = new EticaretContext();
@@ -28,7 +30,7 @@ namespace ETicaret.UI.Controllers
         {
             var usermail = User.Identity.Name;
             var userId = c.Users.Where(x => x.FirstName == usermail).Select(y => y.Id).FirstOrDefault();
-            var list = await _adressService.GetAdressList(userId);
+            var list = await _adressService.GetAdressListByUser(userId);
             return View(list.Data);
         }
         public async Task<IActionResult> Create()
@@ -132,22 +134,18 @@ namespace ETicaret.UI.Controllers
                     }
 
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     TempData["Warning"] = $"Beklenmedik bir hata: {ex.Message}";
                 }
-                 return NotFound();
-               
+                return NotFound();
+
             }
-             return NotFound();
+            return NotFound();
 
         }
-        // [HttpPost]
-        // public async Task<IActionResult> Pick(int AdressId)
-        // {
-        //     await
-        // }
         
+
 
 
 

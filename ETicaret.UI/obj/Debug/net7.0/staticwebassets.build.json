@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zskaNXpAf4QQTl5x8/dVIVe1hsrzfTdI+v7vVj0kP+8=",
+  "Hash": "zW6KgM4aC6S8bgMIZU0+n8ypA0+jZqayu8YWOp/6lLg=",
   "Source": "ETicaret.UI",
   "BasePath": "_content/ETicaret.UI",
   "Mode": "Default",
@@ -30991,6 +30991,23 @@
       "OriginalItemSpec": "wwwroot/file/product/0297745176854f1.png"
     },
     {
+      "Identity": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/0538d517e39444c.webp",
+      "SourceId": "ETicaret.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/",
+      "BasePath": "_content/ETicaret.UI",
+      "RelativePath": "file/product/0538d517e39444c.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/file/product/0538d517e39444c.webp"
+    },
+    {
       "Identity": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/0868bc2507c341b.png",
       "SourceId": "ETicaret.UI",
       "SourceType": "Discovered",
@@ -31348,6 +31365,23 @@
       "OriginalItemSpec": "wwwroot/file/product/6b0f93aaa12b4d4.jpeg"
     },
     {
+      "Identity": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/6d44444952d943a.webp",
+      "SourceId": "ETicaret.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/",
+      "BasePath": "_content/ETicaret.UI",
+      "RelativePath": "file/product/6d44444952d943a.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/file/product/6d44444952d943a.webp"
+    },
+    {
       "Identity": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/71bfc571ade24d4.png",
       "SourceId": "ETicaret.UI",
       "SourceType": "Discovered",
@@ -31654,6 +31688,23 @@
       "OriginalItemSpec": "wwwroot/file/product/c44c1eb6f9584fb.png"
     },
     {
+      "Identity": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/c53f535284ee4f9.webp",
+      "SourceId": "ETicaret.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/",
+      "BasePath": "_content/ETicaret.UI",
+      "RelativePath": "file/product/c53f535284ee4f9.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/file/product/c53f535284ee4f9.webp"
+    },
+    {
       "Identity": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/c5dc74fc5fd9475.png",
       "SourceId": "ETicaret.UI",
       "SourceType": "Discovered",
@@ -31754,6 +31805,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/file/product/e242544ab12147a.jpeg"
+    },
+    {
+      "Identity": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/e66fba11b9f04c5.webp",
+      "SourceId": "ETicaret.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/",
+      "BasePath": "_content/ETicaret.UI",
+      "RelativePath": "file/product/e66fba11b9f04c5.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/file/product/e66fba11b9f04c5.webp"
     },
     {
       "Identity": "/Users/fatihcopkayaoglu/Documents/GitHub/ETiceret/ETicaret.UI/wwwroot/file/product/e7b78e11946d488.png",
